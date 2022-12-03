@@ -96,5 +96,36 @@ join medico m
 on  m.id_med = c.id_med_cons
 ORDER BY p.nome_paciente;
 
+select*from consulta
+left join paciente
+on id_consulta = id_pac_cons;
+
+select*from consulta
+right join paciente
+on id_consulta = id_pac_cons;
+
+select*from consulta
+inner join paciente
+on id_consulta = id_pac_cons;
+
+
+
+select*from medico
+inner join consulta
+on id_med_cons = id_consulta;
+
+select*from medico
+left join consulta
+on id_med_cons = id_consulta;
+
+select*from medico
+right join consulta
+on id_med_cons = id_consulta;
+
+
+SELECT* from medico, paciente
+FULL JOIN consulta 
+ON id_med_cons = id_consulta;
+
 
 
